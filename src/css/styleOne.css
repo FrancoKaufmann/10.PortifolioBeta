@@ -505,34 +505,6 @@ aside .twoEllipse3 {
     transition: 1s all cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-/* Animaçao com mudaça para text */
-.fa-linkedin:hover::before {
-    content: "Linkedin";
-    font-size: 1.9rem;
-    font-family:'Poppins';
-    font-weight: 700;
-}
-
-.fa-square-github:hover::before {
-    content: "Github";
-    font-size: 1.9rem;
-    font-family:'Poppins';
-    font-weight: 700;
-}
-
-.fa-whatsapp:hover::before {
-    content: "Whatsapp";
-    font-size: 1.9rem;
-    font-family:'Poppins';
-    font-weight: 700;
-}
-
-.fa-file:hover::before {
-    content: "Currículo";
-    font-size: 1.9rem;
-    font-family:'Poppins';
-    font-weight: 700;
-}
 
 .threeSocial div i:hover {
     color: var(--backgroundYellow);
@@ -760,6 +732,7 @@ footer footer p {
     article .oneImg img {
         display: none;
     }
+
 }
 
 
@@ -793,6 +766,14 @@ footer footer p {
         width: 400px;
         height: auto;
     }
+
+    aside .twoAboutMe p {
+        font-size: 1.5rem;
+    }
+
+    #three .threeWidget p {
+        font-size: 1.5rem;
+    }
 }
 
 @media screen and (max-width:580px){
@@ -805,6 +786,7 @@ footer footer p {
         bottom: 0px;
         left: 250px;
     }
+
 }
 
 @media screen and (max-width:500px){
@@ -904,6 +886,8 @@ footer footer p {
 
 /* adptabilidade do hambuguer */
 @media screen and (max-width:1080px) {
+
+
     nav {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr ;
@@ -958,13 +942,12 @@ footer footer p {
         width: 280px;
         height: 500px;
         border-bottom-left-radius: 20px;
-
         z-index: 1;
         background-color: #F2EFE7;
         padding: 40px 10px 10px 10px;
         text-align: center;
-        top: 100px;
-        right: 0px;
+        top: 50px;
+        left: calc(190% - 35px);
     }
 
     .navigation {

@@ -194,6 +194,20 @@ footer footer p {
         width: 300px;
         margin-left: 55%;
     }
+
+    form {
+        width:calc(100% - 10px);
+    }
+
+    form select {
+        font-size: 1.2rem;
+    }
+
+    footer footer {
+        flex-direction: column;
+    }
+
+
 }
 
 @media screen and (max-width:665px) {
@@ -208,10 +222,30 @@ footer footer p {
     }
 
     .chatSend {
-        width: 100%;
+        width: calc(100% - 20px);
     }
 
     form select {
         width: 60%;
+    }
+}
+
+@media screen and (max-width:565px) {
+    .perfilFt h1 {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width:540px) {
+    ul li:nth-child(even) {
+        margin-left: 60%;
+        width: 150px;
+    }
+}
+
+@media screen and (max-width:500px) {
+    ul li:nth-child(even) {
+        margin-left: 50%;
+        width: 150px;
     }
 }
