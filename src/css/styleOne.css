@@ -695,8 +695,6 @@ footer footer p {
 }
 
 @media screen and (max-width:1000px) {
-
-
     #one {
         justify-content: center;
         flex-direction: column;
@@ -731,6 +729,10 @@ footer footer p {
 
     article .oneImg img {
         display: none;
+    }
+
+    footer footer {
+    flex-direction: column;
     }
 
 }
