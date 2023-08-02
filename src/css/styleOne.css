@@ -636,6 +636,7 @@ footer footer p {
     position: fixed;
     bottom: 5%;
     left: 2%;
+    right: 4%;
     z-index: 1;
     display: none;
 }
@@ -645,7 +646,7 @@ footer footer p {
 }
 
 .cokkiesCont .cokkiesTitle {
-    width: calc(100% - 900px);
+    width: 100%;
     color: #222222;
     font-size: 0.9rem;
     background-color: var(--backgroundLight);
