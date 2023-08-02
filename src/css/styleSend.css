@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Roboto:wght@400;500;700;900&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+.twoTriangle {
+    position: relative;
+}
+
+@keyframes floatImg {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);  
+    }
+}
+
+.twoTriangle img {
+    animation: floatImg 3s ease-in-out infinite;
+    width: 500px;
+    height: 520px;
+    margin-left: 50px;
+    z-index: 1;
+    
+}
+
+@keyframes floatEllipse {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(50px);
+    }
+}
+
+aside .twoEllipse1 {
+    animation: floatEllipse 3s ease-in-out infinite;
+    position: absolute;
+    left: 280px;
+    width: 300px;
+    height: 300px;
+    background-color: #FC7818;
+    border-radius: 300px;
+    filter: blur(20.5px);
+    z-index: 0;
+}
+
+aside .twoEllipse2 {
+    animation: floatEllipse 3s ease-in-out infinite;
+    position: absolute;
+    top: 200px;
+    left: 50px;
+    width: 250px;
+    height: 250px;
+    background-color: #297e01;
+    border-radius: 300px;
+    filter: blur(20.5px);
+    z-index: 0;
+}
+
+aside .twoEllipse3 {
+    animation: floatEllipse 3s ease-in-out infinite;
+    position: absolute;
+    top: 300px;
+    left: 390px;
+    width: 150px;
+    height: 150px;
+    background-color: #FCB118;
+    border-radius: 300px;
+    filter: blur(20.5px);
+    z-index: 1;
+}
+
+.containerSend {
+    max-width: 1400px;
+    margin: auto;
+
+}
+
+.containerForm {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+.containerSend h1 {
+    text-align: center;
+    font-family: 'Poppins';
+    font-size: 3rem;
+    margin-bottom: 40px;
+}
+
+.containerForm form {
+    display: flex;
+    flex-direction: column;
+}
+
+.containerForm form label {
+    font-family: 'Poppins';
+    font-size: 1.2rem;
+}
+.containerForm select {
+    height: 38px;
+    width: 50%;
+}
+.containerForm select option {
+    padding: 5px;
+}
+.containerForm input,textarea,select {
+    font-family: 'Poppins';
+    background-color: #F2EFE7;
+    border: 2px solid #222222;
+    height: 25px;
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    outline: none!important;
+    transition: 200ms all cubic-bezier(0.075, 0.82, 0.165, 1);
+    padding: 5px;
+}
+
+.containerForm textarea {
+    resize:none;
+    height: 30px;
+    overflow-y: scroll;
+}
+
+.containerForm textarea:focus {
+    height: 100px;
+    font-size: 1.2rem;
+    transition: 200ms all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.containerForm input:focus {
+    height: 50px;
+    font-size: 1.2rem;
+    transition: 200ms all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.containerForm input:focus, textarea:focus, select:focus{
+    border:2px solid #297e01;
+}
+.containerForm input:hover,textarea:hover, select:hover {
+    border:2px solid #297e01;
+}
+
+.containerForm input:invalid {
+    border: 2px solid tomato;
+}
+
+.containerForm input:valid {
+    border:2px solid #297e01
+}
+
+.containerForm button {
+    cursor: pointer;
+    background-color: #FCB118;
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 1.3rem;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 40px;
+    transition: 300ms all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.containerForm button:hover {
+    transform: scale(0.9);
+    background-color: #222222;
+    color: #F2EFE7;
+}
+
+.containerForm button:disabled {
+    cursor: not-allowed;
+    color: #555b69;
+}
+
+
+footer {
+    background-color: #222222;
+}
+
+footer footer {
+    max-width: 1400px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 300px;
+}
+
+footer footer h1 {
+    font-size: 9rem;
+    font-family:'Poppins';
+    font-weight: 700;
+    color: #F2EFE7;
+}
+
+footer footer p {
+    font-size: 1rem;
+    font-family:'Poppins';
+    font-weight: 700;
+    color: #F2EFE7;
+}
+
+@media screen and (max-width:1420px) {
+    .containerForm form {
+        margin-left: 40px;
+    }
+}
+
+@media screen and (max-width:1160px){ 
+
+    .containerForm form {
+        margin-left: 40px;
+    }
+
+    .twoTriangle img {
+        margin-left: 0px;
+    }
+
+    aside .twoEllipse1 {
+        width: 200px;
+        height: 200px;
+        left: 200px;
+    }
+
+    aside .twoEllipse3 {
+        left: 300px;
+    }
+}
+
+@media screen and (max-width:890px) {
+
+    .containerSend h1 {
+        font-size: 4.5rem;
+    }
+
+    .containerForm form label {
+        font-family: 'Poppins';
+        font-size: 1.6rem;
+    }
+
+    .containerForm button {
+        font-size: 2.2rem;
+    }
+
+    .containerForm form {
+        grid-area: form;
+    }
+
+    .twoTriangle {
+        grid-area: twoTriangle;
+    }
+    .containerForm {
+    display: grid;
+    grid-template-areas: 
+    "twoTriangle twoTriangle"
+    "form form"
+    ;
+    }
+
+    .twoTriangle {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 40px;
+    }
+
+    aside .twoEllipse1{
+        left: 350px;
+    }
+
+    aside .twoEllipse2{
+        left: 150px;
+    }
+
+    aside .twoEllipse3{
+        left: 500px;
+    }
+
+    .containerForm form {
+        display: flex;
+        justify-content: center;
+        margin: 40px 40px;
+    }
+
+    footer footer {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width:650px) {
+    aside .twoEllipse1{
+        left: 300px;
+    }
+
+    aside .twoEllipse2{
+        left: 80px;
+    }
+
+    aside .twoEllipse3{
+        left: 400px;
+    }
+
+
+}
+
+@media screen and (max-width:560px)  {
+    aside .twoEllipse1{
+        left: 100px;
+        top: -40px;
+        width: 150px;
+        height: 150px;
+    }
+
+    aside .twoEllipse2{
+        top:150px;
+        left: 20px;
+        width: 150px;
+        height: 150px;
+    }
+
+    aside .twoEllipse3{
+        left: 250px;
+        top: 100px;
+        width: 150px;
+        height: 150px;
+    }
+
+    .twoTriangle img {
+        width: 300px;
+        height: auto;
+    
+    }
+
+}
+
+@media screen and (max-width:400px) {
+    aside .twoEllipse1{
+        left: 100px;
+        top: -40px;
+        width: 80px;
+        height: 80px;
+        filter: blur(10px);
+    }
+
+    aside .twoEllipse2{
+        top:100px;
+        left: 60px;
+        width: 80px;
+        height: 80px;
+        filter: blur(10px);
+    }
+
+    aside .twoEllipse3{
+        left: 250px;
+        top: 100px;
+        width: 80px;
+        height: 80px;
+        filter: blur(10px);
+    }
+}

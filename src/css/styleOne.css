@@ -1,39 +1,5 @@
 /* --------FONTES-------- */
-@font-face {
-    font-family:'TT-Chocolates';
-    src: url(/src/font/TT-Chocolates-Trial-DemiBold-BF64000de5e93e5.otf);
-    src: url(/src/font/TT-Chocolates-Trial-Medium-BF64000de754de1.otf);
-    src: url(/src/font/TT-Chocolates-Trial-Regular-BF64000de741fcc.otf);
-}
-
-@font-face {
-    font-family:'TT-ChocolatesRegular';
-    src: url(/src/font/TT-Chocolates-Trial-Regular-BF64000de741fcc.otf);
-}
-
-@font-face {
-    font-family:'TT-ChocolatesMedium';
-    src: url(/src/font/TT-Chocolates-Trial-Medium-BF64000de754de1.otf);
-    
-}
-
-@font-face {
-    font-family:'TT-ChocolatesBold';
-    src: url(/src/font/TT-Chocolates-Trial-Bold-BF64000de738662.otf);
-}
-
-
-@font-face {
-    font-family:'TT-ChocolatesDemiBold';
-    src: url(/src/font/TT-Chocolates-Trial-DemiBold-BF64000de5e93e5.otf);
-
-}
-
-@font-face {
-    font-family:'TT-ChocolatesExtraBold';
-    src: url(/src/font/TT-Chocolates-Trial-ExtraBold-BF64000de66f30b.otf);
-
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Roboto:wght@400;500;700;900&display=swap');
 
 /* ------RESET------ */
 * {
@@ -70,8 +36,9 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    font-family:'TT-ChocolatesDemiBold';
+    font-family:'Poppins';
+    color: #161616;
+    font-weight: 700;
     height: 100px;
     max-width: 1400px;
     margin: auto;
@@ -81,9 +48,29 @@ nav div {
     font-size: 2rem;
 }
 
+/* DARK MODE */
+.darkMode {
+    background-color: transparent;
+    border: none;
+}
+
+.darkMode ion-icon {
+    transition: 500ms all ;
+    background-color: #FCB118;
+    border-radius: 40px;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 1.8rem;
+    margin-left: 40px;
+    
+}
 /* Logo */
+.logo.light {
+    color: var(--backgroundDark);
+}
 .logo {
-    font-family: 'TT-ChocolatesExtraBold';
+    font-family:'Poppins';
+    font-weight: 900;
     font-size: 3rem;
     margin-left: 5px;
 }
@@ -103,6 +90,10 @@ nav div {
     cursor: pointer;
     color: var(--backgroundDark)
 }
+
+.nav.light {
+    color: #222222;
+} 
 
 /* Animação da nav(li) */
 .navigation ul li:hover {
@@ -124,9 +115,9 @@ nav div {
     cursor: pointer;
     border: none;
     border-radius: 20px;
-
     margin-right: 5px;
-    font-family:'TT-ChocolatesDemiBold';
+    font-family:'Poppins';
+    font-weight: 600;
     color: var(--backgroundDark);
     font-size: 1.3rem;
 
@@ -165,11 +156,13 @@ article .oneTitle {
 /* Customização do titulo principal */
 article .oneTitle div:nth-child(1) {
     height: 200px;
-    width: 500px;
+    width: 600px;
     margin-top: 30px;
-    font-family: 'TT-ChocolatesBold';
-    font-size: 2rem;
+    font-family:'Poppins';
+    font-weight: 700;
+    font-size: 1.8rem;
     position: relative;
+    margin-bottom: 25px;
     
 }
 
@@ -192,7 +185,7 @@ article .oneTitle div:nth-child(1) span {
 article .fa-regular {
     position: relative;
     color: var(--backgroundYellow);
-    left: 330px;
+    left: 300px;
     bottom: 60px;
     animation: float 3s ease-in-out infinite;
 
@@ -204,11 +197,13 @@ article .oneSkills ul {
 }
 
 article .oneSkills ul li {
-    font-family:'TT-ChocolatesMedium';
+    font-family:'Poppins';
+    font-weight: 500;
     color: var(--colorGreen);
     font-size: 1.5rem;
     margin-left: 20px;
     margin-right: 20px;
+    margin-bottom: 25px;
 }
 
 article .oneSkills ul li:nth-child(1) {
@@ -227,8 +222,9 @@ article .oneCaption h2 {
     border: 3px solid var(--backgroundYellow);
     padding: 10px;
     border-radius: 20px;
-    font-family:'TT-ChocolatesDemiBold';
-}
+    font-family:'Poppins';
+    font-weight: 600;
+} 
 
 /* Botão */
 article .oneButton {
@@ -237,14 +233,20 @@ article .oneButton {
     margin-top: 25px;
 }
 
+article .oneButton button a {
+    color: #222222;
+}
+
 article .oneButton button {
     cursor: pointer;
     background-color: transparent;
     border: none;
-    font-family: 'TT-ChocolatesDemiBold';
+    font-family:'Poppins';
+    font-weight: 600;
     font-size: 1.5rem;
     border-bottom: 3px solid var(--backgroundYellow);
     transition: 500ms all cubic-bezier(0.165, 0.84, 0.44, 1);
+    color: #222222;
 }
 
 article .oneButton button:hover {
@@ -252,7 +254,7 @@ article .oneButton button:hover {
     background-color: var(--backgroundYellow);
     padding: 10px;
     border-radius: 15px;
-
+    color: #222222;
     transition: 500ms all cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
@@ -302,6 +304,7 @@ aside .twoAboutMe {
 
 aside .twoTriangle {
     grid-area: twoTriangle;
+    position: relative;
 }
 
 @keyframes floatImg {
@@ -324,7 +327,8 @@ position: relative;
 
 /* Texto sobre mim */
 aside .twoAboutMe h1 {
-    font-family:'TT-ChocolatesExtraBold';
+    font-family:'Poppins';
+    font-weight: 800;
     color: #297e01;
     text-align: center;
     font-size: 3rem;
@@ -333,7 +337,8 @@ aside .twoAboutMe h1 {
 }
 
 aside .twoAboutMe p {
-    font-family:'TT-ChocolatesMedium';
+    font-family:'Poppins';
+    font-weight: 500;
     font-size: 2rem;
     padding: 20px;
     width:auto;
@@ -403,6 +408,9 @@ aside .twoEllipse3 {
     padding-top: 20px;
     padding-bottom: 20px;
     margin-top: 70px;
+}
+
+.three {
     background-color: rgba(252, 177, 24, 0.8);
 }
 
@@ -419,7 +427,8 @@ aside .twoEllipse3 {
 
 /* Titulo */
 #three h1 {
-    font-family:'TT-ChocolatesExtraBold';
+    font-family:'Poppins';
+    font-weight: 800;
     color: #F2EFE7;
     text-align: center;
     font-size: 3rem;
@@ -428,8 +437,7 @@ aside .twoEllipse3 {
 }
 
 /* Widgets */
-#three .threeWidget {
-    border: 3px solid var(--colorOrange);
+.threeWidget {
     background-color: #FC7818;
     border-radius: 20px;
     padding: 20px;
@@ -439,18 +447,22 @@ aside .twoEllipse3 {
 
 /* Texto */
 #three .threeWidget p {
-    font-family:'TT-ChocolatesRegular';
+    font-family:'Poppins';
+    font-weight: 400;
     color: #222222;
     font-size: 1.5rem;
     background-color: #F2EFE7;
     padding: 10px;
     border-radius: 10px;
+    border: 3px solid var(--backgroundYellow);
 }
 
 #three .threeWidget img {
+    border: 3px solid var(--backgroundYellow);
     width: 100%;
     border-radius: 10px;
     margin-bottom: 15px;
+    height: 268px;
 }
 
 .fa-regular {
@@ -497,25 +509,29 @@ aside .twoEllipse3 {
 .fa-linkedin:hover::before {
     content: "Linkedin";
     font-size: 1.9rem;
-    font-family:'TT-ChocolatesExtraBold';
+    font-family:'Poppins';
+    font-weight: 700;
 }
 
 .fa-square-github:hover::before {
     content: "Github";
     font-size: 1.9rem;
-    font-family:'TT-ChocolatesExtraBold';
+    font-family:'Poppins';
+    font-weight: 700;
 }
 
 .fa-whatsapp:hover::before {
     content: "Whatsapp";
     font-size: 1.9rem;
-    font-family:'TT-ChocolatesExtraBold';
+    font-family:'Poppins';
+    font-weight: 700;
 }
 
 .fa-file:hover::before {
     content: "Currículo";
     font-size: 1.9rem;
-    font-family:'TT-ChocolatesExtraBold';
+    font-family:'Poppins';
+    font-weight: 700;
 }
 
 .threeSocial div i:hover {
@@ -524,11 +540,11 @@ aside .twoEllipse3 {
     transition: 1s all cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-/* ----------------HARD SKILLS--------------------- */
-
-#four {
-    background-color: rgba(252, 177, 24, 0.8);  
+/* ----------------Certificados--------------------- */
+.four {
+    background-color: rgba(252, 177, 24, 0.8); 
 }
+
 #four aside {
     max-width: 1400px;
     margin: auto;
@@ -541,7 +557,8 @@ aside .twoEllipse3 {
 .fourTitle h1 {
     margin-top: 70px;
     margin-bottom: 40px;
-    font-family:'TT-ChocolatesExtraBold';
+    font-family:'Poppins';
+    font-weight: 800;
     color: #F2EFE7;
     font-size: 3rem;
     text-align: center;
@@ -552,7 +569,8 @@ table {
 }
 
 td {
-    font-family:'TT-ChocolatesDemiBold';
+    font-family:'Poppins';
+    font-weight: 600;
     font-size: 1.8rem;
 }
 
@@ -597,14 +615,66 @@ footer footer {
 
 footer footer h1 {
     font-size: 9rem;
-    font-family:'TT-ChocolatesBold';
+    font-family:'Poppins';
+    font-weight: 700;
     color: var(--backgroundLight);
 }
 
 footer footer p {
     font-size: 1rem;
-    font-family:'TT-ChocolatesBold';
+    font-family:'Poppins';
+    font-weight: 700;
     color: var(--backgroundLight);
+}
+
+
+/* Cookies */
+
+.cokkiesCont {
+    margin: 0px;
+    font-family: 'Poppins';
+    position: fixed;
+    bottom: 5%;
+    left: 2%;
+    z-index: 1;
+    display: none;
+}
+
+.cokkiesCont.mostrar {
+    display: block;
+}
+
+.cokkiesCont .cokkiesTitle {
+    width: calc(100% - 900px);
+    color: #222222;
+    font-size: 0.9rem;
+    background-color: var(--backgroundLight);
+    padding: 10px 20px;
+    border-radius: 10px;
+
+}
+
+.cokkiesCont .cokkiesBtn {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.cokkiesCont .cokkiesBtn button:hover {
+    transform: scale(0.9);
+    background-color: #222222;
+}
+
+.cokkiesCont .cokkiesBtn button {
+    transition: 300ms all;
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 5px 40px;
+    border: none;
+    color: #F2EFE7;
+    background-color: #FCB118;
+    border-radius: 5px;
+    font-family: 'Poppins';
 }
 
 /* Scroolbar */
@@ -671,17 +741,18 @@ footer footer p {
     }
 
     aside .twoEllipse1 {
-        bottom: 80px;
+        bottom: 70px;
+        left: 0px;
     }
 
     aside .twoEllipse2 {
-        top: 500px;
-        left: 500px;
+        top: 20px;
+        left: 300px;
     }
 
     aside .twoEllipse3 {
-        top: 890px;
-        left: 500px;
+        top: 470px;
+        left: 300px;
     }
 
 
@@ -690,42 +761,25 @@ footer footer p {
     }
 }
 
-@media screen and (max-width:800px) {
-    aside .twoEllipse1 {
-        bottom: 80px;
-        left: 10px;
-    }
-
-    aside .twoEllipse2 {
-        top: 500px;
-        left: 300px;
-    }
-
-    aside .twoEllipse3 {
-        top: 890px;
-        left: 400px;
-    }
-
-}
 
 @media screen and (max-width:750px) {
     aside .twoEllipse1 {
-        bottom: 60px;
-        left: 90px;
+        bottom: 70px;
+        left: 0px;
         width: 150px;
         height:160px;
     }
 
     aside .twoEllipse2 {
-        top: 600px;
-        left: 290px;
+        top: 20px;
+        left: 200px;
         width: 150px;
         height:160px;
     }
 
     aside .twoEllipse3 {
-        top: 800px;
-        left: 400px;
+        top: 280px;
+        left: 200px;
     }
 
     .threeSocial div {
@@ -740,28 +794,30 @@ footer footer p {
     }
 }
 
-@media screen and (max-width:570px){
-    aside .twoEllipse1 {
-        bottom: 30px;
-        left: 90px;
-        width: 150px;
-        height:160px;
+@media screen and (max-width:580px){
+    article .oneTitle div:nth-child(1) {
+        height: auto;
+        width: auto;
     }
 
-    aside .twoEllipse2 {
-        top: 700px;
-        left: 200px;
-        width: 150px;
-        height:160px;
-    }
-
-    aside .twoEllipse3 {
-        top: 900px;
-        left: 300px;
+    article .fa-regular {
+        bottom: 0px;
+        left: 250px;
     }
 }
 
 @media screen and (max-width:500px){
+
+    table {
+        display: flex;
+        justify-content: center;
+        margin: 0px;
+    }
+
+    article .oneSkills ul  {
+        justify-content: center;
+    }
+
     article .oneTitle {
         justify-content: center;
         align-items: center;
@@ -775,7 +831,7 @@ footer footer p {
     
     article .fa-regular {
         position: absolute;
-        bottom: 0px;
+        top: -80px;
         left: 150px;
     }
 
@@ -788,26 +844,27 @@ footer footer p {
     }
 
     aside .twoEllipse1 {
-        bottom: 30px;
-        left: 30px;
+        bottom: 70px;
+        left: 0px;
         width: 150px;
         height:160px;
     }
 
     aside .twoEllipse2 {
-        top: 800px;
+        top: 10px;
         left: 150px;
         width: 150px;
         height:160px;
     }
 
     aside .twoEllipse3 {
-        top: 1050px;
-        left: 220px;
+        top: 210px;
+        left: 200px;
     }
 
     
 }
+
 
 /* ----------------MENU HAMBUGUER----------- */
 .hamburguer {
@@ -844,8 +901,8 @@ footer footer p {
     left: 0px;
 }
 
-/* adptabilidade */
-@media screen and (max-width:1000px) {
+/* adptabilidade do hambuguer */
+@media screen and (max-width:1080px) {
     nav {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr ;
@@ -866,8 +923,8 @@ footer footer p {
     .buttonSpeak {
         position: absolute;
         display: none;
-        top: 490px;
-        right: 25px;
+        top: 530px;
+        right: 5px;
         font-size: 2rem;
         width: 240px;
         height: 50px;
@@ -901,11 +958,21 @@ footer footer p {
         height: 500px;
         border-bottom-left-radius: 20px;
 
-        background-color: var(--backgroundLight);
+        z-index: 1;
+        background-color: #F2EFE7;
         padding: 40px 10px 10px 10px;
         text-align: center;
         top: 100px;
         right: 0px;
+    }
+
+    .navigation {
+        position: relative;
+    }
+
+    .darkMode {
+        position: absolute;
+        left: calc(270% - 100px);
     }
 
     .nav.active {
@@ -915,5 +982,66 @@ footer footer p {
 
     .buttonSpeak.active {
         display: block;
+        z-index: 1;
     }
+}
+
+/* DARK MOD */
+html {
+    transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.dark {
+    transition: 200ms all cubic-bezier(0.075, 0.82, 0.165, 1);
+    background-color: #222222;
+    color: #F2EFE7;
+}
+.darkNav {
+    transition: 200ms all cubic-bezier(0.075, 0.82, 0.165, 1);
+    background-color: #878787;
+}
+
+.darkButton {
+    transition: 200ms all cubic-bezier(0.075, 0.82, 0.165, 1);
+    color: #F2EFE7;
+}
+
+.darkThree {
+    transition: 200ms all cubic-bezier(0.075, 0.82, 0.165, 1);
+    background-color: #353535;
+}
+
+.darkFour {
+    transition: 200ms all cubic-bezier(0.075, 0.82, 0.165, 1);
+    background-color: #353535;
+}
+
+.sunny {
+    display: block;
+}
+
+.sunny.dark {
+    display: none;
+}
+
+.moon.dark {
+    display: block;
+    background-color: #F2EFE7;
+}
+
+.moon {
+    display: none;
+}
+
+/* Scrol Reval */ 
+#one, #two {
+    visibility: hidden;
+}
+
+header #check{
+    position: absolute;
+    z-index: 1;
+    width: 50px;
+    height: 50px;
+    opacity: 0.5;
 }
