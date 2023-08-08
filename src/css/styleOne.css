@@ -234,7 +234,7 @@ article .oneButton {
 }
 
 article .oneButton button a {
-    color: #222222;
+    text-decoration: none;
 }
 
 article .oneButton button {
