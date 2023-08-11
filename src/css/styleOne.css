@@ -234,8 +234,7 @@ article .oneButton {
 }
 
 article .oneButton button a {
-    text-decoration: none;
-    color: #297e01;
+    color: #222222;
 }
 
 article .oneButton button {
@@ -1040,4 +1039,26 @@ header #check{
     width: 50px;
     height: 50px;
     opacity: 0.5;
+}
+
+@keyframes pulsar {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+article .oneButton button {
+    animation: pulsar 2s infinite;
+}
+
+.fourCt {
+    margin-left: 100px;
+    font-family: 'Poppins';
+    margin-bottom: 100px;
 }

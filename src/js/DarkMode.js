@@ -1,4 +1,5 @@
 const darkMode = document.querySelector(".darkMode");
+var html = document.querySelector("html");
 
 
 function darkMod() {
@@ -18,6 +19,9 @@ function darkMod() {
     four.classList.toggle("darkFour");
     sunny.classList.toggle("dark");
     moon.classList.toggle("dark");
-    
+
 }
+
+
+
 

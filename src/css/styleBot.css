@@ -256,3 +256,7 @@ footer footer p {
 ::-webkit-scrollbar-thumb {
     background-color: #FCB118;
 }
+
+.fa-chevron-left {
+    color: black;
+}

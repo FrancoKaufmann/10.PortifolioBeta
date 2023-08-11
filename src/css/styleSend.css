@@ -148,10 +148,6 @@ aside .twoEllipse3 {
     border:2px solid #297e01;
 }
 
-.containerForm input:invalid {
-    border: 2px solid tomato;
-}
-
 .containerForm input:valid {
     border:2px solid #297e01
 }
@@ -172,11 +168,6 @@ aside .twoEllipse3 {
     transform: scale(0.9);
     background-color: #222222;
     color: #F2EFE7;
-}
-
-.containerForm button:disabled {
-    cursor: not-allowed;
-    color: #555b69;
 }
 
 
